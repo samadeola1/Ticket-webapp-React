@@ -144,7 +144,7 @@ const Landing: React.FC = () => {
                  return (
                     <div
                         key={i}
-                        ref={el => featureRefs.current[i] = el}
+                     ref={(el) => { featureRefs.current[i] = el; }}
                         className="p-8 rounded-2xl shadow-md bg-white opacity-0 transform translate-y-6 transition-all duration-700 ease-out hover:shadow-xl hover:-translate-y-2 cursor-default"
                     >
                         <div className="text-indigo-600 mb-4">
