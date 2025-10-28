@@ -76,12 +76,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   }, []);
 
   const logout = useCallback(() => {
-    const userEmail = user?.email; // Capture email before setting user to null
+    // const userEmail = user?.email; // Capture email before setting user to null
     setUser(null);
     localStorage.removeItem("ticketapp_session");
-     if (userEmail) {
-       localStorage.removeItem(`tickets_${userEmail}`); // Clear tickets on logout
-     }
+    //  if (userEmail) {
+    //    localStorage.removeItem(`tickets_${userEmail}`); // Clear tickets on logout
+    //  }
   }, [user]);
 
   const signup = useCallback((name: string, email: string, password: string): SignupResult => {
